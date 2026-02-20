@@ -145,6 +145,10 @@ def consume_messages(
             "bootstrap.servers": bootstrap_servers,
             "group.id": group_id,
             "auto.offset.reset": "earliest" if from_beginning else "latest",
+            # used when there is no initial offset or if the current offset doesn't exist anymore for the consumer group
+
+            # kind of interesting that earliest will still trigger a massive reconsumption of old data for rebuilding an
+            # existing consumer group even though offsets already exist
         }
     )
 

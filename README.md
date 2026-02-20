@@ -1,5 +1,5 @@
 # kafka-sandbox
-Sandbox for experimenting with and testing librdkafka
+Sandbox utility for experimenting with and testing confluent-kafka
 
 ## Prerequisites
 * Docker Desktop or Colima
